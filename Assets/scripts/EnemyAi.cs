@@ -7,6 +7,8 @@ public class EnemyAi : MonoBehaviour
 {
     [SerializeField] Transform target;
     [SerializeField] float chaseRange = 5f;
+    [SerializeField] float turnSpeed = 2f;
+    
 
     NavMeshAgent navMeshAgent;
     float distanceTarget = Mathf.Infinity;
@@ -33,6 +35,7 @@ public class EnemyAi : MonoBehaviour
     }
 
     void EngageTarget() {
+        FaceTarget();
         if(distanceTarget >= navMeshAgent.stoppingDistance)
         {
             ChaseTarget();
@@ -52,6 +55,13 @@ public class EnemyAi : MonoBehaviour
     private void AttackTarget()
     {
         Debug.Log(name + "has seeked and is destroying " + target.name);
+    }
+
+    private void FaceTarget() {
+        // rotate to the target
+        Vector3 direction = (target.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0f, 0f));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
     }
 
     private void OnDrawGizmos()

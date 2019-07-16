@@ -483,12 +483,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 946158504}
   m_PrefabAsset: {fileID: 0}
---- !u!20 &1004880976 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0,
-    type: 3}
-  m_PrefabInstance: {fileID: 1415286755}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1126735306
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,24 +771,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.415
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: near clip plane
-      value: 0.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 2337074158285625209, guid: 5e9e851c0e142814dac026a256ba2ac0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.284
-      objectReference: {fileID: 0}
-    - target: {fileID: 2337074158285625209, guid: 5e9e851c0e142814dac026a256ba2ac0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
@@ -1114,6 +1090,7 @@ GameObject:
   - component: {fileID: 2142472274}
   - component: {fileID: 2142472278}
   - component: {fileID: 2142472279}
+  - component: {fileID: 2142472280}
   m_Layer: 0
   m_Name: Ai
   m_TagString: Untagged
@@ -1230,23 +1207,16 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!1 &2337074158285589337 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2337074158285589337, guid: 5e9e851c0e142814dac026a256ba2ac0,
-    type: 3}
-  m_PrefabInstance: {fileID: 1415286755}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2337074158285589338
+--- !u!114 &2142472280
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2337074158285589337}
+  m_GameObject: {fileID: 2142472273}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc4662e9671d84846a03595ec9fe32ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ca946452ecd3604b8b6f3299218f925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FPCamera: {fileID: 1004880976}
-  range: 100
+  hitPoints: 100
