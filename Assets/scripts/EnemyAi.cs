@@ -34,6 +34,10 @@ public class EnemyAi : MonoBehaviour
 
     }
 
+    public void OnDamageTaken() {
+        isProvoked = true;
+    }
+
     void EngageTarget() {
         FaceTarget();
         if(distanceTarget >= navMeshAgent.stoppingDistance)
